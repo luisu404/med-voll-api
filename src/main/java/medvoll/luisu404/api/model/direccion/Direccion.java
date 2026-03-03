@@ -4,7 +4,7 @@ import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import medvoll.luisu404.api.dto.direccion.DireccionDTO;
+import medvoll.luisu404.api.dto.direccion.DatosDireccion;
 
 @Getter
 @NoArgsConstructor
@@ -19,14 +19,44 @@ public class Direccion {
     private String ciudad;
     private String estado;
 
-    public Direccion(DireccionDTO direccionDTO){
-        this.calle = direccionDTO.calle();
-        this.numero = direccionDTO.numero();
-        this.complemento = direccionDTO.complemento();
-        this.barrio = direccionDTO.barrio();
-        this.codigo_postal = direccionDTO.codigo_postal();
-        this.ciudad = direccionDTO.ciudad();
-        this.estado = direccionDTO.estado();
+    public Direccion(DatosDireccion datosDireccion){
+        this.calle = datosDireccion.calle();
+        this.numero = datosDireccion.numero();
+        this.complemento = datosDireccion.complemento();
+        this.barrio = datosDireccion.barrio();
+        this.codigo_postal = datosDireccion.codigo_postal();
+        this.ciudad = datosDireccion.ciudad();
+        this.estado = datosDireccion.estado();
+    }
+
+    public void actualizarDireccion(DatosDireccion datosDireccion) {
+        if (datosDireccion.calle() != null) {
+            this.calle = datosDireccion.calle();
+        }
+
+        if (datosDireccion.numero() != null) {
+            this.numero = datosDireccion.numero();
+        }
+
+        if (datosDireccion.complemento() != null) {
+            this.complemento = datosDireccion.complemento();
+        }
+
+        if (datosDireccion.barrio() != null) {
+            this.barrio = datosDireccion.barrio();
+        }
+
+        if (datosDireccion.codigo_postal() != null) {
+            this.codigo_postal = datosDireccion.codigo_postal();
+        }
+
+        if (datosDireccion.ciudad() != null) {
+            this.ciudad = datosDireccion.ciudad();
+        }
+
+        if (datosDireccion.estado() != null) {
+            this.estado = datosDireccion.estado();
+        }
     }
 }
 

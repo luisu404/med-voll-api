@@ -1,4 +1,4 @@
-package medvoll.luisu404.api.model.medico;
+package medvoll.luisu404.api.domain.medico;
 
 public enum Especialidad {
     ORTOPEDIA,

@@ -1,8 +1,8 @@
 package medvoll.luisu404.api.dto.medico;
 
-import medvoll.luisu404.api.model.direccion.Direccion;
-import medvoll.luisu404.api.model.medico.Especialidad;
-import medvoll.luisu404.api.model.medico.Medico;
+import medvoll.luisu404.api.domain.direccion.Direccion;
+import medvoll.luisu404.api.domain.medico.Especialidad;
+import medvoll.luisu404.api.domain.medico.Medico;
 
 public record DatosDetalleMedico(
         Long id,

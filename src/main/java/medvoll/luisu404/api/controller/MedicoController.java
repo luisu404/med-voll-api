@@ -5,7 +5,7 @@ import medvoll.luisu404.api.dto.medico.DatosActualizaMedico;
 import medvoll.luisu404.api.dto.medico.DatosDetalleMedico;
 import medvoll.luisu404.api.dto.medico.DatosListaMedico;
 import medvoll.luisu404.api.dto.medico.DatosRegistroMedico;
-import medvoll.luisu404.api.model.medico.Medico;
+import medvoll.luisu404.api.domain.medico.Medico;
 import medvoll.luisu404.api.repository.MedicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -15,8 +15,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/medicos")
@@ -36,6 +34,7 @@ public class MedicoController {
 
     @GetMapping
     public ResponseEntity<Page<DatosListaMedico>> listar(@PageableDefault(size=10,sort={"nombre"}) Pageable paginacion){
+
         var page = medicoRepository.findAllByActivoTrue(paginacion)
                 .map(DatosListaMedico::new);
         return ResponseEntity.ok(page);
@@ -61,5 +60,4 @@ public class MedicoController {
         var medico =  medicoRepository.getReferenceById(id);
         return ResponseEntity.ok(new DatosDetalleMedico(medico));
     }
-
 }

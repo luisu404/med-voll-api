@@ -1,4 +1,4 @@
-package medvoll.luisu404.api.model.medico;
+package medvoll.luisu404.api.domain.medico;
 
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import medvoll.luisu404.api.dto.medico.DatosActualizaMedico;
 import medvoll.luisu404.api.dto.medico.DatosRegistroMedico;
-import medvoll.luisu404.api.model.direccion.Direccion;
+import medvoll.luisu404.api.domain.direccion.Direccion;
 
 @Getter
 @NoArgsConstructor

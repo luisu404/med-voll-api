@@ -1,5 +1,5 @@
 package medvoll.luisu404.api.dto.paciente;
-import medvoll.luisu404.api.model.paciente.Paciente;
+import medvoll.luisu404.api.domain.paciente.Paciente;
 
 public record DatosListaPaciente(
         Long id,

@@ -1,4 +1,4 @@
-package medvoll.luisu404.api.model.direccion;
+package medvoll.luisu404.api.domain.direccion;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

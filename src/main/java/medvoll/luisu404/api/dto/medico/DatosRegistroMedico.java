@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import medvoll.luisu404.api.dto.direccion.DatosDireccion;
-import medvoll.luisu404.api.model.medico.Especialidad;
+import medvoll.luisu404.api.domain.medico.Especialidad;
 
 public record DatosRegistroMedico(
         @NotBlank String nombre,

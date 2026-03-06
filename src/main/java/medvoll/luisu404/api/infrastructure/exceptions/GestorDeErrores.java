@@ -1,4 +1,4 @@
-package medvoll.luisu404.api.infra.exceptions;
+package medvoll.luisu404.api.infrastructure.exceptions;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpStatus;
@@ -52,7 +52,10 @@ public class GestorDeErrores {
     }
 
 
-
+    @ExceptionHandler(ValidacionException.class)
+    public ResponseEntity tratarErrorDeValidacion(ValidacionException ex){
+        return ResponseEntity.badRequest().body(ex.getMessage());
+    }
 
 
     public record DatosErrorValidacion(String campo, String mensaje){

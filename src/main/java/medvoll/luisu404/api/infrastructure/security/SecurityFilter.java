@@ -1,4 +1,4 @@
-package medvoll.luisu404.api.infra.security;
+package medvoll.luisu404.api.infrastructure.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

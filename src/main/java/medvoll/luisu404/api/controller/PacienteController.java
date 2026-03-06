@@ -1,5 +1,6 @@
 package medvoll.luisu404.api.controller;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import medvoll.luisu404.api.dto.paciente.DatosActualizaPaciente;
 import medvoll.luisu404.api.dto.paciente.DatosDetallePaciente;
@@ -18,7 +19,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/api/pacientes")
-
+@SecurityRequirement(name = "bearer-key")
 public class PacienteController {
     @Autowired
     private PacienteRepository pacienteRepository;

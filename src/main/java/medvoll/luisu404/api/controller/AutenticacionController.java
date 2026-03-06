@@ -3,7 +3,7 @@ package medvoll.luisu404.api.controller;
 import jakarta.validation.Valid;
 import medvoll.luisu404.api.domain.usuario.Usuario;
 import medvoll.luisu404.api.dto.usuario.DatosAutenticacion;
-import medvoll.luisu404.api.infra.security.DatosTokenJWT;
+import medvoll.luisu404.api.infrastructure.security.DatosTokenJWT;
 import medvoll.luisu404.api.service.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
